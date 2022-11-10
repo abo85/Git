@@ -1,5 +1,5 @@
 {
-	"name": "LandingZoneDwh",
+	"name": "LandingZoneParquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "global-ws-WorkspaceDefaultStorage",
