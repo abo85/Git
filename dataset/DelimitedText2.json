@@ -1,5 +1,5 @@
 {
-	"name": "LandigZoneCSV",
+	"name": "DelimitedText2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "global-ws-WorkspaceDefaultStorage",
