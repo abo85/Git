@@ -1,5 +1,5 @@
 {
-	"name": "LandingZoneParquet",
+	"name": "Parquet1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "global-ws-WorkspaceDefaultStorage",
