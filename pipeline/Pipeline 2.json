@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "MDWRessourcesCSV",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference",
 						"parameters": {
 							"itemName": "*"
@@ -100,7 +100,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "MDWRessourcesCSV",
+									"referenceName": "DelimitedText1",
 									"type": "DatasetReference",
 									"parameters": {
 										"itemName": {
