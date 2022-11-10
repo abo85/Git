@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "*",
+				"fileName": "yellow_tripdata_2019-01.csv",
 				"container": "nyctaxidata"
 			},
 			"columnDelimiter": ",",
