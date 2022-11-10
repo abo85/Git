@@ -5,12 +5,20 @@
 			"referenceName": "MDWResources",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"itemName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "yellow_tripdata_2019-01.csv",
+				"fileName": {
+					"value": "@dataset().itemName",
+					"type": "Expression"
+				},
 				"container": "nyctaxidata"
 			},
 			"columnDelimiter": ",",
