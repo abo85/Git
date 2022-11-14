@@ -16,11 +16,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DelimitedText1",
-						"type": "DatasetReference",
-						"parameters": {
-							"itemName": "*"
-						}
+						"referenceName": "DelimitedText1_Folder",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"itemName"
