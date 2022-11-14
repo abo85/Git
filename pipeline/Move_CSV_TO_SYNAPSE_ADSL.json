@@ -1,5 +1,5 @@
 {
-	"name": "Pipeline 2",
+	"name": "Move_CSV_TO_SYNAPSE_ADSL",
 	"properties": {
 		"activities": [
 			{
