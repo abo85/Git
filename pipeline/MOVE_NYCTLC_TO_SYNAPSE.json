@@ -1,5 +1,5 @@
 {
-	"name": "Pipeline 1",
+	"name": "MOVE_NYCTLC_TO_SYNAPSE",
 	"properties": {
 		"activities": [
 			{
