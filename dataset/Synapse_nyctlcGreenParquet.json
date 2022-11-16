@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "nyctlc",
+				"folderPath": "nyctlc/yellow",
 				"fileSystem": "landingzone"
 			},
 			"compressionCodec": "snappy"
