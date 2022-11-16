@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "CONCAT(\"nyctlc/\",dataset().path)",
+					"value": "@concat('nyctlc/',dataset().path)",
 					"type": "Expression"
 				},
 				"fileSystem": "landingzone"
