@@ -5,12 +5,20 @@
 			"referenceName": "AzureBlobStoragenyctlc",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"path": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "fhv",
+				"folderPath": {
+					"value": "@dataset().path",
+					"type": "Expression"
+				},
 				"container": "nyctlc"
 			},
 			"compressionCodec": "snappy"

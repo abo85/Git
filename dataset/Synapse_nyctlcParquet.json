@@ -5,12 +5,20 @@
 			"referenceName": "global-ws-WorkspaceDefaultStorage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"path": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "nyctlc/fhv",
+				"folderPath": {
+					"value": "CONCAT(\"nyctlc/\",dataset().path)",
+					"type": "Expression"
+				},
 				"fileSystem": "landingzone"
 			},
 			"compressionCodec": "snappy"
