@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText2",
+	"name": "SynapseCsv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "global-ws-WorkspaceDefaultStorage",

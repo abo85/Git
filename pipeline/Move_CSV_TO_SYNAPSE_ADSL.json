@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DelimitedText1_Folder",
+						"referenceName": "MDWcsv_Folder",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -97,7 +97,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText1",
+									"referenceName": "MDWcsv",
 									"type": "DatasetReference",
 									"parameters": {
 										"itemName": {
@@ -109,7 +109,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedText2",
+									"referenceName": "SynapseCsv",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "landingzone",

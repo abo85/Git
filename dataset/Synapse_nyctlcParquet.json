@@ -1,5 +1,5 @@
 {
-	"name": "Synapse_nyctlcGreenParquet",
+	"name": "Synapse_nyctlcParquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "global-ws-WorkspaceDefaultStorage",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "nyctlc/yellow",
+				"folderPath": "nyctlc/fhv",
 				"fileSystem": "landingzone"
 			},
 			"compressionCodec": "snappy"

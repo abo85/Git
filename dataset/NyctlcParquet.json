@@ -1,5 +1,5 @@
 {
-	"name": "NyctlcGreenParquet",
+	"name": "NyctlcParquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStoragenyctlc",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "yellow",
+				"folderPath": "fhv",
 				"container": "nyctlc"
 			},
 			"compressionCodec": "snappy"

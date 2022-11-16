@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "MDWcsv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "MDWResources",
