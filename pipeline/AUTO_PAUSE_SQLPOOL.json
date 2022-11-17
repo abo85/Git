@@ -133,10 +133,6 @@
 												},
 												"userProperties": [],
 												"typeProperties": {
-													"url": {
-														"value": "@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',activity('CheckState').output.name,'/resume?api-version=2019-06-01-preview')",
-														"type": "Expression"
-													},
 													"connectVia": {
 														"referenceName": "AutoResolveIntegrationRuntime",
 														"type": "IntegrationRuntimeReference"
@@ -167,10 +163,6 @@
 												},
 												"userProperties": [],
 												"typeProperties": {
-													"url": {
-														"value": "@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',activity('CheckState').output.name,'/pause?api-version=2019-06-01-preview')",
-														"type": "Expression"
-													},
 													"connectVia": {
 														"referenceName": "AutoResolveIntegrationRuntime",
 														"type": "IntegrationRuntimeReference"
