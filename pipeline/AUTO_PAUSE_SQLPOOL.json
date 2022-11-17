@@ -195,19 +195,19 @@
 		"parameters": {
 			"ResourceGroup": {
 				"type": "string",
-				"defaultValue": "Synapse"
+				"defaultValue": "synapse_rg"
 			},
 			"SubscriptionID": {
 				"type": "string",
-				"defaultValue": "<SubscriptionID>"
+				"defaultValue": "d3ce2efc-3c23-4c5c-b5b4-3f736c2477e0"
 			},
 			"WorkspaceName": {
 				"type": "string",
-				"defaultValue": "Synapse"
+				"defaultValue": "global-ws"
 			},
 			"SQLPoolName": {
 				"type": "string",
-				"defaultValue": "SQLPool1"
+				"defaultValue": "DWH"
 			},
 			"PauseorResume": {
 				"type": "string",
