@@ -121,7 +121,7 @@
 										"value": "Paused-Resume",
 										"activities": [
 											{
-												"name": "Web1",
+												"name": "SQLPoolResume",
 												"type": "WebActivity",
 												"dependsOn": [],
 												"policy": {
@@ -133,6 +133,10 @@
 												},
 												"userProperties": [],
 												"typeProperties": {
+													"url": {
+														"value": "@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',activity('CheckState').output.name,'/resume?api-version=2019-06-01-preview')",
+														"type": "Expression"
+													},
 													"connectVia": {
 														"referenceName": "AutoResolveIntegrationRuntime",
 														"type": "IntegrationRuntimeReference"
@@ -151,7 +155,7 @@
 										"value": "Online-Pause",
 										"activities": [
 											{
-												"name": "Web2",
+												"name": "SQLPoolPause",
 												"type": "WebActivity",
 												"dependsOn": [],
 												"policy": {
@@ -163,6 +167,10 @@
 												},
 												"userProperties": [],
 												"typeProperties": {
+													"url": {
+														"value": "@concat('https://management.azure.com/subscriptions/',pipeline().parameters.SubscriptionID,'/resourceGroups/',pipeline().parameters.ResourceGroup,'/providers/Microsoft.Synapse/workspaces/',pipeline().parameters.WorkspaceName,'/sqlPools/',activity('CheckState').output.name,'/pause?api-version=2019-06-01-preview')",
+														"type": "Expression"
+													},
 													"connectVia": {
 														"referenceName": "AutoResolveIntegrationRuntime",
 														"type": "IntegrationRuntimeReference"
