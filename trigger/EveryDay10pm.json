@@ -3,21 +3,7 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "AUTO_PAUSE_SQLPOOL",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"ResourceGroup": "synapse_rg",
-					"SubscriptionID": "d3ce2efc-3c23-4c5c-b5b4-3f736c2477e0",
-					"WorkspaceName": "global-ws",
-					"SQLPoolName": "DWH",
-					"PauseorResume": "Pause"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
