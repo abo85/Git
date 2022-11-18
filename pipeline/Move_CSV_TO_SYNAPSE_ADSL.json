@@ -1,5 +1,5 @@
 {
-	"name": "Pipeline 2",
+	"name": "Move_CSV_TO_SYNAPSE_ADSL",
 	"properties": {
 		"activities": [
 			{
@@ -16,17 +16,15 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "MDWRessourcesCSV",
-						"type": "DatasetReference",
-						"parameters": {
-							"itemName": "*"
-						}
+						"referenceName": "MDWcsv_Folder",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"itemName"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -41,14 +39,14 @@
 					{
 						"activity": "Get Metadata1",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					}
 				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.itemName",
+						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
 					},
 					"activities": [
@@ -99,11 +97,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "MDWRessourcesCSV",
+									"referenceName": "MDWcsv",
 									"type": "DatasetReference",
 									"parameters": {
 										"itemName": {
-											"value": "@item()",
+											"value": "@item().name",
 											"type": "Expression"
 										}
 									}
@@ -111,7 +109,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "LandigZoneCSV",
+									"referenceName": "SynapseCsv",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "landingzone",

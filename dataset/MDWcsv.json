@@ -1,15 +1,12 @@
 {
-	"name": "LandigZoneCSV",
+	"name": "MDWcsv",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "global-ws-WorkspaceDefaultStorage",
+			"referenceName": "MDWResources",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"container": {
-				"type": "string"
-			},
-			"path": {
+			"itemName": {
 				"type": "string"
 			}
 		},
@@ -17,15 +14,12 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"folderPath": {
-					"value": "@dataset().path",
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().itemName",
 					"type": "Expression"
 				},
-				"fileSystem": {
-					"value": "@dataset().container",
-					"type": "Expression"
-				}
+				"container": "nyctaxidata"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
