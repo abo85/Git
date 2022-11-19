@@ -10,9 +10,16 @@ IF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'landingzone
 		LOCATION = 'abfss://landingzone@synapseadlsfromdax.dfs.core.windows.net' 
 	)
 GO
-DROP  EXTERNAL TABLE GreenTaxi
+IF NOT EXISTS ( SELECT  *
+                FROM    sys.schemas
+                WHERE   name = N'ext' )
+    EXEC('CREATE SCHEMA [ext]');
 GO
-CREATE EXTERNAL TABLE GreenTaxi (
+
+IF EXISTS ( SELECT * FROM sys.external_tables WHERE object_id = OBJECT_ID('ext.GreenTaxi') )
+DROP  EXTERNAL TABLE ext.GreenTaxi
+GO
+CREATE EXTERNAL TABLE ext.GreenTaxi (
 	[vendorID] int,
 	[lpepPickupDatetime] datetime2(7),
 	[lpepDropoffDatetime] datetime2(7),
