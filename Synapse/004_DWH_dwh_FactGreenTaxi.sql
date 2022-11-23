@@ -35,9 +35,5 @@ CREATE  TABLE dwh.FactGreenTaxi (
 	WITH
 (   CLUSTERED COLUMNSTORE INDEX
 ,   DISTRIBUTION = HASH([vendorID])
-,   PARTITION   (   [PartitionID] RANGE RIGHT FOR VALUES
-                    (20000101,20010101,20020101
-                    ,20030101,20040101,20050101
-                    )
-                )
+,   PARTITION   ( [PartitionID] RANGE RIGHT FOR VALUES()   )
 );
