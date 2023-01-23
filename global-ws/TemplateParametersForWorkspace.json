@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "global-ws"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"global-ws-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:global-ws.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"AzureBlobStorage1_sasUri": {
+			"value": ""
+		},
+		"AzureBlobStoragenyctlc_sasUri": {
+			"value": ""
+		},
+		"MDWResources_sasUri": {
+			"value": ""
+		},
+		"global-ws-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://synapseadlsfromdax.dfs.core.windows.net"
+		},
+		"Every2Hour_properties_AUTO_PAUSE_SQLPOOL_parameters_ResourceGroup": {
+			"value": "synapse_rg"
+		},
+		"Every2Hour_properties_AUTO_PAUSE_SQLPOOL_parameters_SubscriptionID": {
+			"value": "d3ce2efc-3c23-4c5c-b5b4-3f736c2477e0"
+		},
+		"Every2Hour_properties_AUTO_PAUSE_SQLPOOL_parameters_WorkspaceName": {
+			"value": "global-ws"
+		},
+		"Every2Hour_properties_AUTO_PAUSE_SQLPOOL_parameters_SQLPoolName": {
+			"value": "DWH"
+		},
+		"Every2Hour_properties_AUTO_PAUSE_SQLPOOL_parameters_PauseorResume": {
+			"value": "Pause"
+		}
+	}
+}
