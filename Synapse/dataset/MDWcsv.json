@@ -1,0 +1,31 @@
+{
+	"name": "MDWcsv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MDWResources",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"itemName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().itemName",
+					"type": "Expression"
+				},
+				"container": "nyctaxidata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

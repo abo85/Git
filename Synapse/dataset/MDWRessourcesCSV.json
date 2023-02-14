@@ -1,0 +1,23 @@
+{
+	"name": "MDWRessourcesCSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MDWResources",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "yellow_tripdata_2019-01.csv",
+				"container": "nyctaxidata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
