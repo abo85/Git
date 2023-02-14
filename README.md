@@ -1,0 +1,2 @@
+# AzureJourney
+My Azure training
